@@ -1,0 +1,95 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.box {
+    width: 500px;
+    height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    background-color: gray;
+
+    
+    transition: all 0.5s ease-in-out;
+}
+
+h2 {
+    font-size: 2rem; /* uso de REM (slide de medidas relativas) */
+    color: white;
+}
+
+
+h2::before {
+    content: "Cinza";
+}
+
+
+@media screen and (max-width: 420px) {
+    .box {
+        background-color: gray;
+    }
+
+    h2::before {
+        content: "Cinza";
+    }
+}
+
+
+@media screen and (min-width: 421px) and (max-width: 768px) {
+    .box {
+        background-color: orange;
+    }
+
+    h2::before {
+        content: "Laranja";
+    }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .box {
+        background-color: blue;
+    }
+
+    h2::before {
+        content: "Azul";
+    }
+}
+
+
+@media screen and (min-width: 1025px) and (max-width: 1920px) {
+    .box {
+        background-color: purple;
+    }
+
+    h2::before {
+        content: "Roxo";
+    }
+}
+
+
+@media screen and (min-width: 1921px) {
+    .box {
+        background-color: green;
+    }
+
+    h2::before {
+        content: "Verde";
+    }
+}
